@@ -47,7 +47,6 @@ A template for new Flutter project.
 flutter-template
 ├───build
 ├───assets
-│   ├───fonts
 │   ├───icons
 │   └───images
 ├───lib
