@@ -1,16 +1,81 @@
-# flutter_template
+# Flutter Template
 
-A new Flutter project.
+A template for new Flutter project.
 
-## Getting Started
+# Features
+- Multi platforms
+  - Tested on Android API 32 (Pixel 4a)
+- Screens
+  - Welcome screen
+  - Login / SignUp Screen
+  - List Screen
+- Basic components
+  - Button
+  - Card container
+  - Scrollable page container with padding
+- l10n locales support
+  - `zh-TW`
+- Services
+  - Dio
+  - Sample fake data
+- Data model examples
+- Theming
+  - Using Material 3
+- Routing: Navigator
+  - Navigation Tab
+- Utils
+  - Datetime extension
+  - String extension
+  - Password and email validation
+- ...More upcoming
 
-This project is a starting point for a Flutter application.
+## Project Structure
+```
+flutter-template
+├───build
+├───assets
+│   ├───fonts
+│   ├───icons
+│   └───images
+├───lib
+│   ├───generated
+│   │   └───intl
+│   ├───l10n
+│   ├───models
+│   │   └───api
+│   ├───services
+│   ├───theme
+│   ├───utils
+│   └───widgets
+│       ├───components
+│       └───screens
+├───test
+├───android
+├───ios
+├───linux
+├───macos
+├───web
+└───windows
+```
 
-A few resources to get you started if this is your first Flutter project:
+# Setup
+## Prequisites
+1. [Install Flutter](https://docs.flutter.dev/get-started/install)
+2. [Install firebase-cli](https://firebase.google.com/docs/cli#install_the_firebase_cli)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Setup
+1. `git clone` this repository
+2. `flutter pub get` to get all dependencies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Development
+Choose `chrome` for debugging 
+
+## Production
+1. `flutter build android`
+2. `firebase deploy`
+   
+## Upgrade SDK
+Update to newer flutter version:
+1. `flutter channel stable`
+2. `flutter upgrade`
+3. `flutter pub upgrade`
