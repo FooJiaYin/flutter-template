@@ -80,6 +80,46 @@ class S {
     );
   }
 
+  /// `早安`
+  String get greeting_morning {
+    return Intl.message(
+      '早安',
+      name: 'greeting_morning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `午安`
+  String get greeting_afternoon {
+    return Intl.message(
+      '午安',
+      name: 'greeting_afternoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `午安`
+  String get greeting_evening {
+    return Intl.message(
+      '午安',
+      name: 'greeting_evening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `晚安`
+  String get greeting_night {
+    return Intl.message(
+      '晚安',
+      name: 'greeting_night',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `首頁`
   String get home {
     return Intl.message(
