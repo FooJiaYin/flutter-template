@@ -21,10 +21,17 @@ class ThemeFont {
         headlineMedium: _h1,
         headlineSmall: _h2,
         titleLarge: _h3,
+
+        /// 16
         titleMedium: _h5,
         // titleSmall,
+        /// 18
         bodyLarge: style(fontSize: h4TextSize),
+
+        /// 16
         bodyMedium: normal,
+
+        /// 10
         bodySmall: small,
         // labelLarge,
         // labelMedium,

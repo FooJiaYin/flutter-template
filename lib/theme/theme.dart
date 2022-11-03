@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'font.dart';
 
+export 'colors.dart';
+export 'font.dart';
+
 class CustomTheme with ChangeNotifier {
   ThemeMode currentTheme = ThemeMode.light;
 
@@ -13,7 +16,10 @@ class CustomTheme with ChangeNotifier {
     // colorSchemeSeed: ThemeColors.primaryColor,
     colorScheme: ColorScheme.fromSeed(
       seedColor: ThemeColors.primaryColor,
+      primary: ThemeColors.primaryColor,
     ),
+    primaryColorDark: ThemeColors.primaryDark,
+    primaryColorLight: ThemeColors.primaryLight,
     scaffoldBackgroundColor: ThemeColors.backgroundColor,
     backgroundColor: Colors.grey.shade400,
     shadowColor: Colors.grey.withOpacity(0.2),
@@ -75,15 +81,59 @@ class CustomTheme with ChangeNotifier {
   );
 
   static ThemeData darkTheme = ThemeData.dark();
+
+  // static ThemeData onPrimaryTheme(context) => Theme.of(context).copyWith(
+  //       brightness: Brightness.dark,
+  //       textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.white, displayColor: Colors.white),
+  //       iconTheme: Theme.of(context).iconTheme.copyWith(color: Colors.white),
+  //       appBarTheme: const AppBarTheme(
+  //         backgroundColor: Colors.transparent,
+  //         foregroundColor: Colors.white,
+  //         centerTitle: true,
+  //       ),
+  //       inputDecorationTheme: const InputDecorationTheme(
+  //         iconColor: Colors.white,
+  //         prefixIconColor: Colors.white,
+  //         suffixIconColor: Colors.white,
+  //         enabledBorder: UnderlineInputBorder(
+  //           borderSide: BorderSide(color: Colors.white30),
+  //         ),
+  //         focusedBorder: UnderlineInputBorder(
+  //           borderSide: BorderSide(color: Colors.white),
+  //         ),
+  //         hintStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.normal, color: Colors.white24),
+  //       ),
+  //       checkboxTheme: Theme.of(context).checkboxTheme.copyWith(
+  //             side: MaterialStateBorderSide.resolveWith(
+  //               (states) => BorderSide(width: 2.0, color: states.contains(MaterialState.selected) ? ThemeColors.primaryColor : Colors.white),
+  //             ),
+  //           ),
+  //     );
 }
 
 class Dimensions {
+  /// 24
   static const screenPadding = 24.0;
+
+  /// 48
   static const screenPaddingWide = 48.0;
+
+  /// 12
   static const containerPadding = 12.0;
+
+  /// 12
   static const cardRadius = 12.0;
+
+  /// 20
+  static const iconSize = 20.0;
+
+  /// 50
   static const buttonRadius = 50.0;
+
+  /// 12
   static const itemMargin = 12.0;
+
+  /// 36, 10
   static EdgeInsetsGeometry buttonPadding = const EdgeInsets.symmetric(
     horizontal: 36.0,
     vertical: 10.0,

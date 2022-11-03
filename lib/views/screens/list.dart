@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/sample.dart';
 import '../../services/fake_data.dart';
-import '../../theme/colors.dart';
 import '../../theme/theme.dart';
 import '../widgets/container.dart';
 import '../widgets/scaffold_page.dart';
