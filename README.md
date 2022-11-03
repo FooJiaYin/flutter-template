@@ -4,6 +4,8 @@ A template for new Flutter project.
 
 # Prerequisites
 - Install Flutter: https://docs.flutter.dev/get-started/install
+- Install [Flutter Intl](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl) extension for VS Code to auto generate intl code from `.arb` files
+  - If you don't want to use intl, please replace all `S.of(context)...` with custom string
 
 # Features
 - Multi platforms
