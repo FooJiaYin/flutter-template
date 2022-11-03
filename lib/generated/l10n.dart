@@ -150,6 +150,16 @@ class S {
     );
   }
 
+  /// `密碼`
+  String get password {
+    return Intl.message(
+      '密碼',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `密碼不能小於6個字`
   String get password_hint {
     return Intl.message(

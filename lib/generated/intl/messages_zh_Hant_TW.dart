@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "greeting_night": MessageLookupByLibrary.simpleMessage("晚安"),
         "home": MessageLookupByLibrary.simpleMessage("首頁"),
         "list": MessageLookupByLibrary.simpleMessage("列表"),
+        "password": MessageLookupByLibrary.simpleMessage("密碼"),
         "password_hint": MessageLookupByLibrary.simpleMessage("密碼不能小於6個字"),
         "settings": MessageLookupByLibrary.simpleMessage("設定"),
         "sign_in": MessageLookupByLibrary.simpleMessage("登入"),

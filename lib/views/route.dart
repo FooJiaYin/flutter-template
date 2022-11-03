@@ -28,7 +28,7 @@ class AppRoute {
 enum TabItem {
   home(icon: Icons.home, label: "Home", tab: HomePage()),
   list(icon: Icons.list, label: "List", tab: ListPage()),
-  settings(icon: Icons.settings, label: "Home", tab: SettingPage());
+  settings(icon: Icons.settings, label: "Settings", tab: SettingPage());
 
   final IconData icon;
   final String label;

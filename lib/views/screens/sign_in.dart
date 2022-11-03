@@ -5,6 +5,7 @@ import '../../models/account.dart';
 import '../../theme/theme.dart';
 import '../../utils/validation.dart';
 import '../widgets/button.dart';
+import '../widgets/form.dart';
 import '../widgets/scaffold_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -15,8 +16,9 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  final email = TextEditingController(text: "");
-  final password = TextEditingController(text: "");
+  final _email = TextEditingController(text: "");
+  final _password = TextEditingController(text: "");
+  bool _validateError = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +27,12 @@ class _SignInPageState extends State<SignInPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextFormField(
-            controller: email,
-            onChanged: (value) => setState(() {}),
-            decoration: InputDecoration(
-              hintText: S.of(context).email,
-              // hintStyle: TextStyle(color: ),
-            ),
-          ),
+          FieldTitle(S.of(context).email),
+          EmailField(_email, validation: !_validateError, errorText: " "),
+          const SizedBox(height: 24),
+          FieldTitle(S.of(context).password),
+          PasswordField(_password, validation: !_validateError, errorText: " "),
+          const SizedBox(height: 24),
           Button(
             onPressed: () => Navigator.pushNamedAndRemoveUntil(context, "/home", (_) => false),
             text: S.of(context).sign_in,

@@ -21,7 +21,7 @@ class FieldTitle extends StatelessWidget {
 }
 
 TextStyle inputTextStyle = const TextStyle(
-  fontSize: 20,
+  fontSize: 16,
   fontWeight: FontWeight.normal,
 );
 
