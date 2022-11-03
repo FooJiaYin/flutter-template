@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../models/sample.dart';
 import '../../theme/theme.dart';
-import '../components/container.dart';
-import '../components/scaffold_page.dart';
+import '../widgets/container.dart';
+import '../widgets/scaffold_page.dart';
 
 class ArticlePage extends StatefulWidget {
   const ArticlePage({

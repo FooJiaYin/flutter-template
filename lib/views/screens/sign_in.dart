@@ -4,8 +4,8 @@ import '../../generated/l10n.dart';
 import '../../models/account.dart';
 import '../../theme/theme.dart';
 import '../../utils/validation.dart';
-import '../components/button.dart';
-import '../components/scaffold_page.dart';
+import '../widgets/button.dart';
+import '../widgets/scaffold_page.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);

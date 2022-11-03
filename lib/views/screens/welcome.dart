@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../generated/l10n.dart';
 import '../../theme/theme.dart';
-import '../components/button.dart';
-import '../components/scaffold_page.dart';
+import '../widgets/button.dart';
+import '../widgets/scaffold_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);

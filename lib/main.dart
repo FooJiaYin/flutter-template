@@ -7,8 +7,8 @@ import 'services/fake_data.dart';
 import 'theme/theme.dart';
 import 'utils/config.dart';
 import 'utils/route.dart';
-import 'widgets/screens/bottom_nav.dart';
-import 'widgets/screens/welcome.dart';
+import 'views/screens/bottom_nav.dart';
+import 'views/screens/welcome.dart';
 
 void main() async {
   await FakeData.init();

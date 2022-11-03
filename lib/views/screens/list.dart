@@ -3,8 +3,8 @@ import '../../models/sample.dart';
 import '../../services/fake_data.dart';
 import '../../theme/colors.dart';
 import '../../theme/theme.dart';
-import '../components/container.dart';
-import '../components/scaffold_page.dart';
+import '../widgets/container.dart';
+import '../widgets/scaffold_page.dart';
 import 'article.dart';
 
 class ListPage extends StatefulWidget {
