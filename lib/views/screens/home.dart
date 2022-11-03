@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../theme/theme.dart';
+import '../../utils/config.dart';
 import '../widgets/container.dart';
 
 import '../widgets/scaffold_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
   
-  final String title;
+  final String title = AppConfig.title;
 
   @override
   State<HomePage> createState() => _HomePageState();

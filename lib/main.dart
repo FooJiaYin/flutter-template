@@ -6,9 +6,7 @@ import 'services/api.dart';
 import 'services/fake_data.dart';
 import 'theme/theme.dart';
 import 'utils/config.dart';
-import 'utils/route.dart';
-import 'views/screens/bottom_nav.dart';
-import 'views/screens/welcome.dart';
+import 'views/route.dart';
 
 void main() async {
   await FakeData.init();
@@ -57,7 +55,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       stream: API.isAuthenticated(),
       builder: (context, AsyncSnapshot<bool> isAuthenticated) {
         final auth = isAuthenticated.hasData ? (isAuthenticated.data ?? false) : false;
-        return auth ? BottomNavPage() : const WelcomePage();
+        return auth ? BottomTabNavigationPage() : const WelcomePage();
       },
     );
   }
