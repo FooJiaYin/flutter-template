@@ -2,6 +2,9 @@
 
 A template for new Flutter project.
 
+# Prerequisites
+- Install Flutter: https://docs.flutter.dev/get-started/install
+
 # Features
 - Multi platforms
   - Tested on Android API 32 (Pixel 4a)
