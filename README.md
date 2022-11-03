@@ -13,6 +13,8 @@ A template for new Flutter project.
   - Button
   - Card container
   - Scrollable page container with padding
+  - Form fields (Email, passwords, text)
+  - Basic shapes (circle)
 - l10n locales support
   - `zh-TW`
 - Services
@@ -23,11 +25,12 @@ A template for new Flutter project.
   - Using Material 3
 - Custom Icon Support
 - Routing: Navigator
-  - Navigation Tab
+  - Bottom Navigation Tab (Material 3)
 - Utils
   - Datetime extension
   - String extension
   - Password and email validation
+  - Animation value mapping function
   
 ## Roadmap
 1. Test build on ios device
@@ -58,9 +61,10 @@ flutter-template
 │   ├───services
 │   ├───theme
 │   ├───utils
-│   └───widgets
-│       ├───components
-│       └───screens
+│   └───views
+│       ├───widgets
+│       ├───screens
+│       └───route.dart
 ├───test
 ├───android
 ├───ios
