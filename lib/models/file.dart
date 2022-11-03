@@ -18,11 +18,18 @@ class File {
     name = name ?? (url == null? null : path.basename(url!));
   }
 
-  
+  /// Get extension of file, ex: `".jpg"`
   String? get extension => url != null ? path.extension(url!) : null;
-  String? get mimeType => url != null ? lookupMimeType(url!) : null; // 'image/jpeg'
+
+  /// Get mimeType of file, ex: `"image/jpeg"`
+  String? get mimeType => url != null ? lookupMimeType(url!) : null; 
+
+  /// Get type of file, ex: `"image"`
   String? get type => mimeType?.split('/')[0];
+
   bool? get isLocal => url == null? null : !url!.startsWith("http");
+
+  /// Return an [Image Widget] if the file is image, else return [null]
   Widget? toWidget() =>
     type == "image"
       ? isLocal! 
