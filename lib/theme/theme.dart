@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/theme/colors.dart';
-import 'package:flutter_template/theme/font.dart';
+import 'colors.dart';
+import 'font.dart';
 
 class CustomTheme with ChangeNotifier {
   ThemeMode currentTheme = ThemeMode.light;
@@ -12,7 +12,7 @@ class CustomTheme with ChangeNotifier {
     primaryColor: ThemeColors.primaryColor,
     // colorSchemeSeed: ThemeColors.primaryColor,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: ThemeColors.primaryColor
+      seedColor: ThemeColors.primaryColor,
     ),
     scaffoldBackgroundColor: ThemeColors.backgroundColor,
     backgroundColor: Colors.grey.shade400,
@@ -21,8 +21,9 @@ class CustomTheme with ChangeNotifier {
 
     textTheme: ThemeFont.textTheme,
 
-    buttonTheme: ButtonThemeData( // 4
-      padding:Dimensions.buttonPadding,
+    buttonTheme: ButtonThemeData(
+      // 4
+      padding: Dimensions.buttonPadding,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(Dimensions.buttonRadius),
       ),
@@ -31,12 +32,12 @@ class CustomTheme with ChangeNotifier {
 
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-          textStyle:  MaterialStateProperty.all(const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2)),
-          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(Dimensions.buttonPadding),
-          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          backgroundColor: MaterialStateProperty.all<Color>(ThemeColors.primaryColor),
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.white)
-        ),
+        textStyle: MaterialStateProperty.all(const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2)),
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(Dimensions.buttonPadding),
+        shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+        backgroundColor: MaterialStateProperty.all<Color>(ThemeColors.primaryColor),
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+      ),
     ),
 
     iconTheme: const IconThemeData(
@@ -47,16 +48,16 @@ class CustomTheme with ChangeNotifier {
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.all<Color>(ThemeColors.primaryColor),
-      )
-    ),   
+      ),
+    ),
 
     appBarTheme: const AppBarTheme(
       backgroundColor: ThemeColors.backgroundColor,
-      foregroundColor: ThemeColors.textColor
+      foregroundColor: ThemeColors.textColor,
     ),
 
     navigationBarTheme: const NavigationBarThemeData(
-      indicatorColor: ThemeColors.primaryColor
+      indicatorColor: ThemeColors.primaryColor,
     ),
 
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -69,8 +70,8 @@ class CustomTheme with ChangeNotifier {
     dialogTheme: DialogTheme(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(Dimensions.cardRadius),
-      )
-    )
+      ),
+    ),
   );
 
   static ThemeData darkTheme = ThemeData.dark();

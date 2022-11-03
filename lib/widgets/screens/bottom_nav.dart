@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_template/generated/l10n.dart';
-import 'package:flutter_template/theme/colors.dart';
-import 'package:flutter_template/utils/config.dart';
-import 'package:flutter_template/widgets/screens/home.dart';
-import 'package:flutter_template/widgets/screens/list.dart';
-import 'package:flutter_template/widgets/screens/settings.dart';
+import '../../generated/l10n.dart';
+import '../../theme/colors.dart';
+import '../../utils/config.dart';
+import 'home.dart';
+import 'list.dart';
+import 'settings.dart';
 
-enum TabItem {
-  home, list, settings
-}
+enum TabItem { home, list, settings }
 
 class BottomNavPage extends StatefulWidget {
   BottomNavPage({
     this.tab = TabItem.home,
-    Key? key
+    Key? key,
   }) : super(key: key);
 
   TabItem tab;
@@ -25,9 +23,9 @@ class BottomNavPage extends StatefulWidget {
 
 class _BottomNavPageState extends State<BottomNavPage> {
   static List<Widget> tabs = <Widget>[
-    HomePage(title: AppConfig.title),
-    ListPage(),
-    SettingPage(),
+    const HomePage(title: AppConfig.title),
+    const ListPage(),
+    const SettingPage(),
   ];
   late int currentTabId;
 
@@ -61,14 +59,17 @@ class _BottomNavPageState extends State<BottomNavPage> {
       S.of(context).list,
       S.of(context).settings,
     ];
-    
-    var items = TabItem.values.map((e) => 
-      // BottomNavigationBarItem(
-      NavigationDestination(
-        icon: Icon(icons[e.index]),
-        label: label[e.index],
-      )
-    ).toList();
+
+    var items = TabItem.values
+        .map(
+          (e) =>
+              // BottomNavigationBarItem(
+              NavigationDestination(
+            icon: Icon(icons[e.index]),
+            label: label[e.index],
+          ),
+        )
+        .toList();
 
     // return BottomNavigationBar(
     //   type: BottomNavigationBarType.fixed,
@@ -82,10 +83,14 @@ class _BottomNavPageState extends State<BottomNavPage> {
     //   },
     // );
     return NavigationBar(
-      destinations: TabItem.values.map((e) => NavigationDestination(
-        icon: Icon(icons[e.index]),
-        label: label[e.index],
-      )).toList(),
+      destinations: TabItem.values
+          .map(
+            (e) => NavigationDestination(
+              icon: Icon(icons[e.index]),
+              label: label[e.index],
+            ),
+          )
+          .toList(),
       selectedIndex: currentTabId,
       onDestinationSelected: (id) {
         setState(() => currentTabId = id);

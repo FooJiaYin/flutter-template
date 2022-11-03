@@ -2,7 +2,7 @@
 import 'dart:convert';
 import 'package:collection/collection.dart';
 
-import 'package:flutter_template/models/user.dart';
+import 'user.dart';
 
 class SampleData {
   String name;

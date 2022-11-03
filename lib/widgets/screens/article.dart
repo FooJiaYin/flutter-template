@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/models/sample.dart';
-import 'package:flutter_template/theme/theme.dart';
-import 'package:flutter_template/widgets/components/container.dart';
-import 'package:flutter_template/widgets/components/scaffold_page.dart';
+import '../../models/sample.dart';
+import '../../theme/theme.dart';
+import '../components/container.dart';
+import '../components/scaffold_page.dart';
 
 class ArticlePage extends StatefulWidget {
-  ArticlePage({
+  const ArticlePage({
     required this.data,
-    Key? key
+    Key? key,
   }) : super(key: key);
 
-  SampleData data;
+  final SampleData data;
 
   @override
   State<ArticlePage> createState() => _ArticlePageState();
@@ -29,8 +29,8 @@ class _ArticlePageState extends State<ArticlePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(data.name),
-            if(data.description != null) Text(data.description!),
-          ]
+            if (data.description != null) Text(data.description!),
+          ],
         ),
       ),
     );

@@ -1,17 +1,14 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:intl/intl.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:flutter_template/services/api.dart';
-import 'package:flutter_template/services/fake_data.dart';
-import 'package:flutter_template/utils/config.dart';
-import 'package:flutter_template/utils/route.dart';
-import 'package:flutter_template/theme/theme.dart';
-import 'package:flutter_template/widgets/screens/bottom_nav.dart';
-import 'package:flutter_template/widgets/screens/welcome.dart';
 import 'generated/l10n.dart';
+import 'services/api.dart';
+import 'services/fake_data.dart';
+import 'theme/theme.dart';
+import 'utils/config.dart';
+import 'utils/route.dart';
+import 'widgets/screens/bottom_nav.dart';
+import 'widgets/screens/welcome.dart';
 
 void main() async {
   await FakeData.init();
@@ -77,5 +74,4 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
-
 }

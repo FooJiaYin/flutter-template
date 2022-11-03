@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_template/theme/theme.dart';
+import '../../theme/theme.dart';
 
 class CardContainer extends StatelessWidget {
-  CardContainer({
+  const CardContainer({
     Key? key,
     required this.child,
     this.width = double.infinity,
@@ -13,7 +13,7 @@ class CardContainer extends StatelessWidget {
     this.margin = const EdgeInsets.only(bottom: Dimensions.itemMargin),
     this.shadows,
     this.onTap,
-    this.onLongPress
+    this.onLongPress,
   }) : super(key: key);
   final Widget child;
   final double width;
@@ -22,8 +22,8 @@ class CardContainer extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final EdgeInsetsGeometry margin;
   final List<BoxShadow>? shadows;
-  void Function()? onTap;
-  void Function()? onLongPress;
+  final void Function()? onTap;
+  final void Function()? onLongPress;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class CardContainer extends StatelessWidget {
             child: child,
           ),
         ),
-      )
+      ),
     );
   }
 }

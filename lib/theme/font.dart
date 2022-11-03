@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/theme/colors.dart';
+import 'colors.dart';
 
 class ThemeFont {
   static const color = ThemeColors.textColor;
@@ -12,38 +12,38 @@ class ThemeFont {
   static const smallTextSize = 10.0;
   static const buttonTextSize = 16.0;
   static TextTheme get textTheme => TextTheme(
-    // displayLarge,
-    displayLarge: style(fontSize: 15),
-    displayMedium: style(fontSize: 15),
-    displaySmall: style(fontSize: 15),
-    // displaySmall,
-    headlineLarge: style(fontSize: 40),
-    headlineMedium: _h1,
-    headlineSmall: _h2,
-    titleLarge: _h3,
-    titleMedium: _h5,
-    // titleSmall,
-    bodyLarge: style(fontSize: h4TextSize),
-    bodyMedium: normal,
-    bodySmall: small,
-    // labelLarge,
-    // labelMedium,
-    // labelSmall,
-    // headline1: _h1,
-    // headline2: _h2,
-    // headline3: _h3,
-    // headline4: _h4,
-    // headline5: _h5,
-    // headline6: h6,
-    // subtitle1,
-    // subtitle2,
-    // bodyText1,
-    // bodyText2,
-    // caption,
-    // button,
-    // overline,
-  );
-  
+        // displayLarge,
+        displayLarge: style(fontSize: 15),
+        displayMedium: style(fontSize: 15),
+        displaySmall: style(fontSize: 15),
+        // displaySmall,
+        headlineLarge: style(fontSize: 40),
+        headlineMedium: _h1,
+        headlineSmall: _h2,
+        titleLarge: _h3,
+        titleMedium: _h5,
+        // titleSmall,
+        bodyLarge: style(fontSize: h4TextSize),
+        bodyMedium: normal,
+        bodySmall: small,
+        // labelLarge,
+        // labelMedium,
+        // labelSmall,
+        // headline1: _h1,
+        // headline2: _h2,
+        // headline3: _h3,
+        // headline4: _h4,
+        // headline5: _h5,
+        // headline6: h6,
+        // subtitle1,
+        // subtitle2,
+        // bodyText1,
+        // bodyText2,
+        // caption,
+        // button,
+        // overline,
+      );
+
   static TextStyle get _h1 => title(fontSize: h1TextSize);
   static TextStyle get _h2 => title(fontSize: h2TextSize);
   static TextStyle get _h3 => title(fontSize: h3TextSize);
@@ -51,24 +51,26 @@ class ThemeFont {
   static TextStyle get _h5 => title(fontSize: h5TextSize);
   static const normal = TextStyle(color: color, fontSize: textSize);
   static const small = TextStyle(color: color, fontSize: smallTextSize);
-  
+
   static TextStyle style({
     Color? color,
     FontWeight fontWeight = FontWeight.normal,
     double? fontSize,
-  }) => TextStyle(
-      color: color ?? ThemeFont.color,
-      fontWeight: fontWeight,
-      fontSize: fontSize ?? textSize,
-    );
+  }) =>
+      TextStyle(
+        color: color ?? ThemeFont.color,
+        fontWeight: fontWeight,
+        fontSize: fontSize ?? textSize,
+      );
 
   static TextStyle title({
     Color? color,
     FontWeight fontWeight = FontWeight.bold,
     double? fontSize,
-  }) => TextStyle(
-      color: color ?? ThemeFont.color,
-      fontWeight: fontWeight,
-      fontSize: fontSize ?? textSize,
-    );
+  }) =>
+      TextStyle(
+        color: color ?? ThemeFont.color,
+        fontWeight: fontWeight,
+        fontSize: fontSize ?? textSize,
+      );
 }

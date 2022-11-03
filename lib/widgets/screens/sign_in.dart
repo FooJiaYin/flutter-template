@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_template/generated/l10n.dart';
-import 'package:flutter_template/models/account.dart';
-import 'package:flutter_template/theme/theme.dart';
-import 'package:flutter_template/utils/validation.dart';
-import 'package:flutter_template/widgets/components/button.dart';
-import 'package:flutter_template/widgets/components/scaffold_page.dart';
+import '../../generated/l10n.dart';
+import '../../models/account.dart';
+import '../../theme/theme.dart';
+import '../../utils/validation.dart';
+import '../components/button.dart';
+import '../components/scaffold_page.dart';
 
 class SignInPage extends StatefulWidget {
-  SignInPage({Key? key}) : super(key: key);
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   State<SignInPage> createState() => _SignInPageState();
@@ -34,10 +34,10 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
           Button(
-            onPressed: () => Navigator.pushNamedAndRemoveUntil(context, "/home", (_)=>false),
+            onPressed: () => Navigator.pushNamedAndRemoveUntil(context, "/home", (_) => false),
             text: S.of(context).sign_in,
           ),
-        ]
+        ],
       ),
     );
   }

@@ -34,8 +34,7 @@ class Account {
 
   String toJson() => json.encode(toMap());
 
-  factory Account.fromJson(String source) =>
-      Account.fromMap(json.decode(source));
+  factory Account.fromJson(String source) => Account.fromMap(json.decode(source));
 
   @override
   String toString() => 'Account(email: $email, password: $password)';
@@ -44,9 +43,7 @@ class Account {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Account &&
-        other.email == email &&
-        other.password == password;
+    return other is Account && other.email == email && other.password == password;
   }
 
   @override

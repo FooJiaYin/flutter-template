@@ -6,37 +6,33 @@ import 'package:mime/mime.dart';
 import 'package:path/path.dart' as path;
 
 class File {
-
   String? url;
   String? name;
 
-      
   File({
     this.url,
     this.name,
   }) {
-    name = name ?? (url == null? null : path.basename(url!));
+    name = name ?? (url == null ? null : path.basename(url!));
   }
 
   /// Get extension of file, ex: `".jpg"`
   String? get extension => url != null ? path.extension(url!) : null;
 
   /// Get mimeType of file, ex: `"image/jpeg"`
-  String? get mimeType => url != null ? lookupMimeType(url!) : null; 
+  String? get mimeType => url != null ? lookupMimeType(url!) : null;
 
   /// Get type of file, ex: `"image"`
   String? get type => mimeType?.split('/')[0];
 
-  bool? get isLocal => url == null? null : !url!.startsWith("http");
+  bool? get isLocal => url == null ? null : !url!.startsWith("http");
 
   /// Return an [Image Widget] if the file is image, else return [null]
-  Widget? toWidget() =>
-    type == "image"
-      ? isLocal! 
-        ? Image.asset(url!)
-        : Image.network(url!)
+  Widget? toWidget() => type == "image"
+      ? isLocal!
+          ? Image.asset(url!)
+          : Image.network(url!)
       : null;
-
 
   File copyWith({
     String? url,
@@ -72,10 +68,8 @@ class File {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
-    return other is File &&
-      other.url == url &&
-      other.name == name;
+
+    return other is File && other.url == url && other.name == name;
   }
 
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_template/theme/theme.dart';
+import '../../theme/theme.dart';
 
 class ScaffoldPage extends StatelessWidget {
   const ScaffoldPage({
@@ -9,7 +9,7 @@ class ScaffoldPage extends StatelessWidget {
     this.appBar,
     this.padding,
     this.backgroundColor,
-    this.alignment = Alignment.topCenter
+    this.alignment = Alignment.topCenter,
   }) : super(key: key);
 
   final Widget? child;
@@ -20,19 +20,18 @@ class ScaffoldPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-      Scaffold(
-        appBar: appBar,
-        backgroundColor: backgroundColor,
-        body: Align(
-          alignment: alignment,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: padding ?? const EdgeInsets.all(Dimensions.screenPadding),
-              child: child
-            )
-          )
-        )
-      );
+    return Scaffold(
+      appBar: appBar,
+      backgroundColor: backgroundColor,
+      body: Align(
+        alignment: alignment,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: padding ?? const EdgeInsets.all(Dimensions.screenPadding),
+            child: child,
+          ),
+        ),
+      ),
+    );
   }
 }

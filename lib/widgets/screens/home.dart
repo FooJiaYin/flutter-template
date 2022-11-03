@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/theme/theme.dart';
-import 'package:flutter_template/widgets/components/container.dart';
+import '../../theme/theme.dart';
+import '../components/container.dart';
 
-import 'package:flutter_template/widgets/components/scaffold_page.dart';
+import '../components/scaffold_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                     style: Theme.of(context).textTheme.headline4,
                   ),
                 ],
-              )
+              ),
             ),
             const SizedBox(height: 12),
             CardContainer(
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                     style: Theme.of(context).textTheme.headline4,
                   ),
                 ],
-              )
+              ),
             ),
           ],
       ), // This trailing comma makes auto-formatting nicer for build methods.

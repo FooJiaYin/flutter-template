@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_template/theme/theme.dart';
+import '../../theme/theme.dart';
 
 class Button extends StatelessWidget {
   const Button({
@@ -27,19 +27,19 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: disabled? null : onPressed, 
-      onLongPress: disabled? null : onLongPress, 
+      onPressed: disabled ? null : onPressed,
+      onLongPress: disabled ? null : onLongPress,
       style: ButtonStyle(
-          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(Dimensions.buttonPadding),
-          // minimumSize: width != null ? MaterialStateProperty.all<Size>(Size(width!, 0)) : null,
-          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          // backgroundColor: onPressed == null || disabled 
-          //   ? MaterialStateProperty.all<Color>(Colors.grey)
-          //   : backgroundColor != null
-          //     ? MaterialStateProperty.all<Color>(backgroundColor!)
-          //     : null,
-        ),
-      child: Text(text, style: textStyle)
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(Dimensions.buttonPadding),
+        // minimumSize: width != null ? MaterialStateProperty.all<Size>(Size(width!, 0)) : null,
+        shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+        // backgroundColor: onPressed == null || disabled
+        //   ? MaterialStateProperty.all<Color>(Colors.grey)
+        //   : backgroundColor != null
+        //     ? MaterialStateProperty.all<Color>(backgroundColor!)
+        //     : null,
+      ),
+      child: Text(text, style: textStyle),
     );
   }
 }

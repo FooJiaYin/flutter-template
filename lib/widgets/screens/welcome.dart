@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_template/generated/l10n.dart';
-import 'package:flutter_template/theme/theme.dart';
-import 'package:flutter_template/widgets/components/button.dart';
-import 'package:flutter_template/widgets/components/scaffold_page.dart';
+import '../../generated/l10n.dart';
+import '../../theme/theme.dart';
+import '../components/button.dart';
+import '../components/scaffold_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _WelcomePageState extends State<WelcomePage> {
             onPressed: () => Navigator.pushNamed(context, "/sign_up"),
             text: S.of(context).sign_up,
           ),
-        ]
+        ],
       ),
     );
   }

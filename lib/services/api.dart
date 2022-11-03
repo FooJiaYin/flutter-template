@@ -1,16 +1,16 @@
 /// Global service, MUST call `init()` when app first launched!
 import 'dart:async';
-import "package:collection/collection.dart";
+
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:flutter_template/models/api/response.dart';
-import 'package:flutter_template/models/account.dart';
-import 'package:flutter_template/models/api/auth_token.dart';
+import '../models/account.dart';
+import '../models/api/auth_token.dart';
+import '../models/api/response.dart';
 
 class API {
   static late Dio instance;
-  static late String baseUrl = "";
+  static String baseUrl = "";
   static late AuthToken? authToken;
   static final authenticated = StreamController<bool>.broadcast();
   static final BaseOptions baseOptions = BaseOptions(
@@ -56,7 +56,7 @@ class API {
           true,
         );
       }
-    }));
+    },),);
 
     // onListen就要馬上廣播登入狀態，否則會視為未登入
     authenticated.onListen = () async {
