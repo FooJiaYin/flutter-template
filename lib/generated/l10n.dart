@@ -80,6 +80,16 @@ class S {
     );
   }
 
+  /// `請輸入正確E-mail地址`
+  String get email_hint {
+    return Intl.message(
+      '請輸入正確E-mail地址',
+      name: 'email_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `早安`
   String get greeting_morning {
     return Intl.message(
@@ -135,6 +145,16 @@ class S {
     return Intl.message(
       '列表',
       name: 'list',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `密碼不能小於6個字`
+  String get password_hint {
+    return Intl.message(
+      '密碼不能小於6個字',
+      name: 'password_hint',
       desc: '',
       args: [],
     );
