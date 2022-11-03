@@ -49,7 +49,7 @@ class ResponseStatus {
       identity: map['identity'] ?? '',
       description: map['description'] ?? '',
       errors:
-          List<ResponseError>.from(map['errors']?.map((x) => ResponseError.fromMap(x))),
+          List<ResponseError>.from(map['errors']?.map(ResponseError.fromMap)),
     );
   }
 

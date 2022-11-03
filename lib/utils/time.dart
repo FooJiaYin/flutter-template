@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 
 import '../generated/l10n.dart';
 
+export 'package:intl/intl.dart';
+
 extension DateTimeFormat on DateTime {
   static final _chineseWeekDay = ["一", "二", "三", "四", "五", "六", "日"];
   static final weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
