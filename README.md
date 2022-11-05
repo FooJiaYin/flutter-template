@@ -89,14 +89,19 @@ flutter-template
 2. `flutter pub get` to get all dependencies
 
 ## Customization
-### Change App Name
+### Change Package Name
 1. Replace all `flutter_template` with the new app name (separate word by underscore `_`)
-2. Replace `title` in `lib/utils/config.dart`
-3. Change `com.example.flutter_template` (android) and `com.example.flutterTemplate` (ios) to the new package name
+2. Change `com.example.flutter_template` (android) and `com.example.flutterTemplate` (ios) to the new package name
+
+### Change App Title
+1. Change `title` in `lib/utils/config.dart`
+2. Change `android:label` in `android\app\src\main\AndroidManifest.xml`
+3. Change "Flutter Template" in `ios\Runner\Info.plist` (`CFBundleDisplayName`)
 
 ### Change App Icon
 1. Replace `assets/icons/icon.png` with the new icon image
-2. `flutter pub run flutter_launcher_icons:main`
+2. Add a line `flutter.minSdkVersion=16` in `android/local.properties`
+3. `flutter pub run flutter_launcher_icons:main`
 
 ### Localization
 To add string value to existing locale (zh-TW): 
